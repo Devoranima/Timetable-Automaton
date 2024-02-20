@@ -9,11 +9,12 @@ __numberOfDays__ = 6
 
 
 class LessonsTable():
-
   def __init__(self, link: str, group: str):
     self.link = link
     self.raw = pd.read_excel(link)
     self.group = group
+
+  def load(self):
     self.loadTimetable()
     self.loadLessons()
 
